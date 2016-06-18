@@ -7,14 +7,14 @@ import (
 )
 
 func (c *Conn) IpTunnel_allowConnection(publicKey *key.Public, addr net.IP) (err error) {
-	if b := addr.To4; b != nil {
+	if b := addr.To4(); b != nil {
 		_, err = c.sendCmd(&request{AQ: "IpTunnel_allowConnection",
 			Args: &struct {
 				Ip     net.IP      `bencode:"ip4Address"`
 				PubKey *key.Public `bencode:"publicKeyOfAuthorizedNode"`
 			}{addr, publicKey}})
 	} else {
-		_, err = c.sendCmd(&request{AQ: "IpTunnel_allowConnections",
+		_, err = c.sendCmd(&request{AQ: "IpTunnel_allowConnection",
 			Args: &struct {
 				Ip     net.IP      `bencode:"ip6Address"`
 				PubKey *key.Public `bencode:"publicKeyOfAuthorizedNode"`
