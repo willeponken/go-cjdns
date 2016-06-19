@@ -3,8 +3,7 @@ package admin
 
 import (
 	"encoding/json"
-	"github.com/ehmry/go-bencode"
-	//"io"
+
 	"io/ioutil"
 	"math/rand"
 	"net"
@@ -12,6 +11,8 @@ import (
 	"regexp"
 	"sync"
 	"time"
+
+	"github.com/ehmry/go-bencode"
 )
 
 type CjdnsAdminConfig struct {

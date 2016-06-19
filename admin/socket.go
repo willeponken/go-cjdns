@@ -6,10 +6,11 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"github.com/ehmry/go-bencode"
 	"io"
 	"math/rand"
 	"time"
+
+	"github.com/ehmry/go-bencode"
 )
 
 type response struct {

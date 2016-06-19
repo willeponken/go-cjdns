@@ -1,6 +1,6 @@
 package admin
 
-import "github.com/ehmry/go-cjdns/key"
+import "github.com/fc00/go-cjdns/key"
 
 func (c *Conn) InterfaceController_disconnectPeer(pubKey key.Public) error {
 	_, err := c.sendCmd(&request{
