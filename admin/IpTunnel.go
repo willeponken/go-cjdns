@@ -3,7 +3,7 @@ package admin
 import (
 	"net"
 
-	"github.com/fc00/go-cjdns/key"
+	"github.com/willeponken/go-cjdns/key"
 )
 
 func (c *Conn) IpTunnel_allowConnection(publicKey *key.Public, addr net.IP) (err error) {

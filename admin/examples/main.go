@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/fc00/go-cjdns/admin"
+	"github.com/willeponken/go-cjdns/admin"
 	"github.com/kylelemons/godebug/pretty"
 )
 
